@@ -1,0 +1,125 @@
+/* user_add.css - 添加用户页面样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+    position: relative;
+    padding-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    color: #dc3545;
+    border: none;
+    cursor: pointer;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.close-btn:hover {
+    opacity: 1;
+    color: #c82333;
+    transform: rotate(-90deg);
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-item {
+    margin-bottom: 15px;
+}
+
+.form-item label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-item input[type="text"], 
+.form-item input[type="password"], 
+.form-item select {
+    padding: 6px 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.form-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 6px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-default {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-default:hover {
+    background: #545b62;
+}
+
+.error-msg {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 10px;
+}
+ 
+.radio-group {
+    display: inline-block;
+}
+
+.radio-group label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}

@@ -1,0 +1,203 @@
+/* 基础样式 - 完全参考原代码 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 20px;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: relative;
+}
+
+/* 关闭按钮 - 完全参考原代码 */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: none;          
+    color: #dc3545;              /* 红色 */
+    border: none;
+    cursor: pointer;
+    z-index: 150;
+    display: flex; /* 原有逻辑：默认显示（由父页面控制隐藏） */
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;          
+    transition: all 0.3s ease; 
+    opacity: 0.7;             
+}
+
+.close-btn:hover {
+    opacity: 1;              
+    color: #c82333;              /* 深红色 */
+    transform: rotate(-90deg); 
+}
+
+/* 标题样式 - 完全参考原代码 */
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 20px;
+}
+
+/* 按钮样式 - 完全参考原代码 */
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #1e7e34;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* 表格样式 - 完全参考原代码 */
+.table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* 斑马纹效果 - 完全参考原代码 */
+tr:nth-child(even) {
+    background-color: #f9f9fa;
+}
+
+.no-data {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.action-cell {
+    white-space: nowrap;
+}
+
+/* 状态标签 - 完全参考原代码 */
+.status-active {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* 消息提示样式 */
+.alert {
+    padding: 12px 20px;
+    margin: 10px 0 20px 0;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+}

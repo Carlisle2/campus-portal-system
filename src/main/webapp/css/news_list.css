@@ -1,0 +1,455 @@
+/* news_list.css - 新闻列表页面样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 关闭按钮 */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    color: #dc3545;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.close-btn:hover {
+    opacity: 1;
+    color: #c82333;
+}
+
+/* 页面标题 */
+.page-title {
+    background: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* 消息提示 */
+.message-box {
+    margin: 15px 20px;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.success-msg {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.error-msg {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* 查询表单 */
+.query-form {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.query-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.query-form label {
+    font-weight: 500;
+    color: #495057;
+    margin-right: 5px;
+}
+
+.query-form input[type="text"],
+.query-form select {
+    padding: 8px 12px;
+    width: 180px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.query-form input[type="text"]:focus,
+.query-form select:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0069d9;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+.btn-default {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-default:hover {
+    background: #5a6268;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* 搜索统计 */
+.search-stats {
+    margin: 15px 20px;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #0c5460;
+}
+
+/* 批量操作 */
+.batch-actions {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.select-all input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.batch-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* 表格样式 */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.user-table th {
+    background: #e9ecef;
+    padding: 12px;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+}
+
+.user-table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.user-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* 标题单元格 */
+.news-title-cell {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.news-title-cell a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-title-cell a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* 状态标签 */
+.status-draft,
+.status-published {
+    padding: 4px 0;  
+    font-size: 15px;
+    font-weight: 600;
+    min-width: auto;  
+    text-transform: uppercase;
+}
+
+.status-draft {
+    color: #dc3545;
+}
+
+.status-published {
+    color: #28a745;
+}
+
+/* 区域标签 */
+.news-region-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.region-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.region-top { background: #fff3cd; color: #856404; }
+.region-important { background: #d1ecf1; color: #0c5460; }
+.region-student-work { background: #d4edda; color: #155724; }
+.region-resource { background: #cce5ff; color: #004085; }
+.region-honor { background: #f8d7da; color: #721c24; }
+.region-event { background: #e2d9f3; color: #4a3c68; }
+.region-home { background: #fff5e6; color: #663c00; }
+
+/* 操作按钮 */
+.news-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+.action-btn-preview {
+    background: #6c757d;
+}
+
+.action-btn-preview:hover {
+    background: #5a6268;
+}
+
+.action-btn-edit {
+    background: #17a2b8;
+}
+
+.action-btn-edit:hover {
+    background: #138496;
+}
+
+.action-btn-delete {
+    background: #dc3545;
+}
+
+.action-btn-delete:hover {
+    background: #c82333;
+}
+
+/* 分页样式 */
+.pagination-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.pagination-info {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.pagination-controls {
+    margin-bottom: 10px;
+}
+
+.pagination-controls .btn-sm {
+    padding: 4px 8px;
+    margin: 0 2px;
+    font-size: 12px;
+    min-width: 32px;
+}
+
+.pagination-controls .btn-sm.active {
+    background-color: #0056b3;
+    border-color: #004085;
+    cursor: default;
+}
+
+.pagination-controls .btn-sm.disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.page-size-selector {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.page-size-selector select {
+    padding: 2px 5px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.page-jump {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.page-jump input {
+    width: 50px;
+    padding: 3px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+/* 无数据提示 */
+.no-data {
+    padding: 40px 20px;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .container {
+        width: 98%;
+        margin: 10px auto;
+    }
+    
+    .query-form form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .query-form input[type="text"],
+    .query-form select {
+        width: 100%;
+    }
+    
+    .batch-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .batch-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .user-table {
+        font-size: 12px;
+    }
+    
+    .user-table th,
+    .user-table td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,229 @@
+/* 成功信息展示区域 - 完全参考原代码 */
+.success-info {
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.success-info h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.success-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.success-item {
+    margin-bottom: 10px;
+}
+
+.success-label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.success-value {
+    color: #333;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+/* 消息提示 - 完全参考原代码 */
+.message {
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+/* 表单样式 - 完全参考原代码 */
+.form-container {
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+.form-group label.required:after {
+    content: " *";
+    color: #e53935;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+}
+
+.form-hint {
+    font-size: 12px;
+    color: #777;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* 操作按钮 - 完全参考原代码 */
+.form-actions {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.form-actions .btn {
+    padding: 12px 30px;
+    margin: 0 10px;
+    min-width: 120px;
+    transition: all 0.3s;
+}
+
+.form-actions .btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.form-actions .btn-secondary:hover {
+    background: #666;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(127, 140, 141, 0.3);
+}
+
+.form-actions .btn-warning:hover {
+    background: #d68910;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.3);
+}
+
+.form-actions .btn-success:hover {
+    background: #1e7e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* 单选按钮样式 - 完全参考原代码 */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* 已提交信息的显示 - 完全参考原代码 */
+.submitted-info {
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.submitted-info h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.submitted-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.submitted-item {
+    margin-bottom: 10px;
+}
+
+.submitted-label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.submitted-value {
+    color: #333;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+/* 管理员ID显示样式 - 完全参考原代码 */
+.admin-id-display {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #e9ecef;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 隐藏表单（提交成功后） */
+.form-hidden {
+    display: none;
+}
