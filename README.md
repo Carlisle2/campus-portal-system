@@ -1,4 +1,4 @@
-# 智慧校园信息门户系统 (Smart Campus Portal System)
+# 校园信息门户系统 (Campus Portal System)
 
 > 🏆 中华人民共和国国家版权局软件著作权（登记号：2026SR0499405）
 > 👨‍💻 独立开发者：陆奥琪
